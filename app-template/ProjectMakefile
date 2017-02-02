@@ -21,8 +21,13 @@ plugins:
 	cordova plugin add cordova-plugin-transport-security
 	cordova plugin add cordova-ios-requires-fullscreen
 	cordova plugin add cordova-plugin-disable-bitcode
-	rm -rf platforms/android/res/values-es
-	cordova plugin add cordova-plugin-android-fingerprint-auth
+	## Fix plugin android-fingerprint
+	mkdir -p $PROJECT/platforms/android/res/backup
+	cp -a $PROJECT/platforms/android/res/values-* $PROJECT/platforms/android/res/backup 
+	rm -rf $PROJECT/platforms/android/res/values-*
+	cordova plugin add https://github.com/mjwheatley/cordova-plugin-android-fingerprint-auth.git#v1.1.0
+	cp -a $PROJECT/platforms/android/res/backup/* $PROJECT/platforms/android/res/
+	rm -rf $PROJECT/platforms/android/res/backup
 	cordova plugin add cordova-plugin-screen-orientation
 	cordova plugin add ionic-plugin-keyboard
 	cordova plugin add cordova-plugin-whitelist
