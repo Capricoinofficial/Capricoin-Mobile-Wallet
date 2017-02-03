@@ -47,20 +47,16 @@ wp8-debug:
 
 ios-prod:
 	cordova/build.sh IOS --clear
-	cd cordova/project && cordova build ios
-	open cordova/project/platforms/ios/Copay.xcodeproj
 
 ios-debug:
 	cordova/build.sh IOS --dbgjs
-	cd cordova/project && cordova build ios
-	open cordova/project/platforms/ios/Copay.xcodeproj
 
 android-prod:
 	cordova/build.sh ANDROID --clear
 	rm -f cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk 
 	cd cordova/project && cordova build android --release
 	jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore capricoin.keystore -signedjar cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk  cordova/project/platforms/android/build/outputs/apk/android-release-unsigned.apk capricoin 
-	../Android/Sdk/build-tools/24.0.3/zipalign -v 4 cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk 
+	../../Library/Android/sdk/build-tools/24.0.3/zipalign -v 4 cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk 
 	
 
 android-debug:
