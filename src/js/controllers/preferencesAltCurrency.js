@@ -4,7 +4,7 @@ angular.module('copayApp.controllers').controller('preferencesAltCurrencyControl
   function($scope, $log, $timeout, configService, rateService, lodash, go, profileService, walletService) {
 
     var config = configService.getSync();
-    var next = 10;
+    var next = 3;
     var completeAlternativeList;
     $scope.currentCurrency = config.wallet.settings.alternativeIsoCode;
     $scope.listComplete = false;
@@ -22,7 +22,7 @@ angular.module('copayApp.controllers').controller('preferencesAltCurrencyControl
     $scope.loadMore = function() {
       $timeout(function() {
         $scope.altCurrencyList = completeAlternativeList.slice(0, next);
-        next += 10;
+        next += 3;
         $scope.listComplete = $scope.altCurrencyList.length >= completeAlternativeList.length;
         $scope.$broadcast('scroll.infiniteScrollComplete');
       }, 100);
