@@ -1,4 +1,3 @@
-
 <div class="topbar-container"
   ng-include="'views/includes/topbar.html'"
   ng-init="showPreferences = true" ng-show="!index.noFocusedWallet">
@@ -28,9 +27,7 @@
   <div class="oh" ng-show="!index.noFocusedWallet">
 
     <!--
-
     WalletHome
-
     -->
 
     <div id="walletHome" class="walletHome tab-view tab-in">
@@ -57,6 +54,7 @@
 
               <div ng-click='index.updateAll({triggerTxUpdate: true})'  ng-show="!index.updateError && index.walletScanStatus != 'error' && !index.shouldHideBalance" on-hold="index.onHold()">
                 <strong class="size-36">{{index.totalBalanceStr}}</strong>
+                <div class="size-14" ng-if="index.totalBalanceAlternative">{{index.totalBalanceAlternative}} {{index.alternativeIsoCode}}</div>
                 <div class="size-14" ng-if="index.pendingAmount">
                   <span translate>Pending Confirmation</span>: {{index.pendingAmountStr}}
                 </div>
@@ -126,6 +124,8 @@
               ng-show="index.lockedBalanceSat">
               <span translate>Total Locked Balance</span>:
               <b>{{index.lockedBalanceStr}} </b>
+              <span> {{index.lockedBalanceAlternative}}
+                {{index.alternativeIsoCode}} </span>
             </div>
           </div>
 
@@ -247,9 +247,7 @@
     </div> <!-- END WalletHome -->
 
     <!--
-
     receive
-
     -->
     <div id="receive" class="receive tab-view">
 
@@ -323,9 +321,7 @@
 
 
     <!--
-
     send
-
     -->
     <div id="send" class="send tab-view">
       <div class="pr p25b">
@@ -461,17 +457,17 @@
                       <input
                         type="number"
                         ng-show="showAlternative"
-                        id="amount"
+                        id="alternative"
                         ng-disabled="!home.isRateAvailable || home.lockAmount"
-                        name="amount"
-                        ng-attr-placeholder="{{'Amount in'|translate}} {{home.unitName}}"
-                        ng-model="_amount"
+                        name="alternative"
+                        ng-attr-placeholder="{{'Amount in'|translate}} {{ home.alternativeName }}"
+                        ng-model="_alternative"
                         required
                         autocomplete="off"
                         ignore-mouse-wheel>
                     </div>
                     <a class="postfix button" ng-show="!showAlternative" ng-style="{'background-color':index.backgroundColor}" ng-click="showAlternative = !showAlternative">{{home.unitName}}</a>
-                    <a class="postfix button black" ng-show="showAlternative" ng-click="showAlternative = !showAlternative">{{home.unitName}}</a>
+                    <a class="postfix button black" ng-show="showAlternative" ng-click="showAlternative = !showAlternative">{{home.alternativeIsoCode}}</a>
                   </div>
                 </div>
               </div>

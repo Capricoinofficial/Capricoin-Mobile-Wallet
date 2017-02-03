@@ -13,9 +13,15 @@
       </div>
       <div translate>Language</div>
     </li>
+	<li href ui-sref="preferencesAltCurrency">		
+      <div class="right text-gray">		
+        {{selectedAlternative.name}}		
+        <i class="icon-arrow-right3 size-24 right"></i>		
+      </div>		
+      <div translate>Alternative Currency</div>		
+    </li>
   </ul>
   <h4></h4>
-
   <ul class="no-bullet m0">
     <li href ui-sref="preferencesUnit">
       <div class="right text-gray">
@@ -26,7 +32,6 @@
     </li>
   </ul>
   <h4></h4>
-
   <ion-toggle ng-model="spendUnconfirmed" toggle-class="toggle-balanced" ng-change="spendUnconfirmedChange()">
     <span class="toggle-label" translate>Use Unconfirmed Funds</span>
   </ion-toggle>
