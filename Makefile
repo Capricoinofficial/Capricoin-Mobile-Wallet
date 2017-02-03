@@ -47,9 +47,13 @@ wp8-debug:
 
 ios-prod:
 	cordova/build.sh IOS --clear
+	cd cordova/project && cordova plugin save && cordova platform rm ios && cordova platform add ios && cordova build ios
+	open cordova/project/platforms/ios/Capricoin\ Mobile\ Wallet.xcodeproj
 
 ios-debug:
 	cordova/build.sh IOS --dbgjs
+	cd cordova/project && cordova plugin save && cordova platform rm ios && cordova platform add ios && cordova build ios
+	open cordova/project/platforms/ios/Capricoin\ Mobile\ Wallet.xcodeproj
 
 android-prod:
 	cordova/build.sh ANDROID --clear
