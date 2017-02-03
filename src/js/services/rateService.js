@@ -45,7 +45,7 @@ RateService.prototype._fetchCurrencies = function() {
   var self = this;
 
   var backoffSeconds = 5;
-  var updateFrequencySeconds = 30;
+  var updateFrequencySeconds = 5 * 60; //every 5 minutes
   var rateServiceUrl = 'https://rates.mmitech.info/index.php?api=cpc_rates';
 
   var retrieve = function() {
