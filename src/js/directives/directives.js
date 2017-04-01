@@ -34,7 +34,7 @@ angular.module('copayApp.directives')
             }
 
             // Bip21 uri
-            if (/^capricoin:/.test(value)) {
+            if (/^Capricoin:/.test(value)) {
               var uri, isAddressValid;
               var isUriValid = URI.isValid(value);
               if (isUriValid) {

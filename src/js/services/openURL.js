@@ -5,7 +5,7 @@ angular.module('copayApp.services').factory('openURLService', function($rootScop
 
   root.registeredUriHandlers = [{
     name: 'Capricoin BIP21 URL',
-    startsWith: 'capricoin:',
+    startsWith: 'Capricoin:',
     transitionTo: 'uripayment',
   }];
 
@@ -87,10 +87,10 @@ angular.module('copayApp.services').factory('openURLService', function($rootScop
 
       // This event is sent to an existent instance of Copay (only for standalone apps)
       gui.App.on('open', function(pathData) {
-        if (pathData.indexOf('capricoin:') != -1) {
+        if (pathData.indexOf('Capricoin:') != -1) {
           $log.debug('Capricoin URL found');
           handleOpenURL({
-            url: pathData.substring(pathData.indexOf('capricoin:'))
+            url: pathData.substring(pathData.indexOf('Capricoin:'))
           });
         } else if (pathData.indexOf('copay:') != -1) {
           $log.debug('Copay URL found');

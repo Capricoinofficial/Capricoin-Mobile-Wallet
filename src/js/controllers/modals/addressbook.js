@@ -35,7 +35,7 @@ angular.module('copayApp.controllers').controller('addressbookController', funct
     $timeout(function() {
       var form = addressbookForm;
       if (data && form) {
-        data = data.replace('capricoin:', '');
+        data = data.replace('Capricoin:', '');
         form.address.$setViewValue(data);
         form.address.$isValid = true;
         form.address.$render();

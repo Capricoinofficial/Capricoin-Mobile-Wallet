@@ -60,7 +60,7 @@ android-prod:
 	rm -f cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk 
 	cd cordova/project && cordova build android --release
 	jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore capricoin.keystore -signedjar cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk  cordova/project/platforms/android/build/outputs/apk/android-release-unsigned.apk capricoin 
-	../../Library/Android/sdk/build-tools/24.0.3/zipalign -v 4 cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk 
+	../Library/Android/sdk/build-tools/25.0.2/zipalign -v 4 cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk 
 	
 
 android-debug:
