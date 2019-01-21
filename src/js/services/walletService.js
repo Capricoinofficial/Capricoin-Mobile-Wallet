@@ -23,13 +23,12 @@ angular.module('copayApp.services').factory('walletService', function($log, loda
 
   var _signWithTrezor = function(client, txp, cb) {
     $log.info('Requesting Trezor  to sign the transaction');
-
     var xPubKeys = lodash.pluck(client.credentials.publicKeyRing, 'xPubKey');
     trezor.signTx(xPubKeys, txp, client.credentials.account, function(err, result) {
       if (err) return cb(err);
-
       $log.debug('Trezor response', result);
-      txp.signatures = result.signatures;
+
+      txp.signatures = result.payload.signatures;
       return client.signTxProposal(txp, cb);
     });
   };

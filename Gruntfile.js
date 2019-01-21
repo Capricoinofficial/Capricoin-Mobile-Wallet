@@ -123,7 +123,7 @@ module.exports = function(grunt) {
           'src/js/coinbase.js',
           'src/js/init.js',
           'src/js/trezor-url.js',
-          'bower_components/trezor-connect/login.js'
+          'bower_components/trezor-connect/index.js',
         ],
         dest: 'public/js/copay.js'
       },

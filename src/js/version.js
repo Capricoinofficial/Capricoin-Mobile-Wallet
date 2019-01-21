@@ -1,2 +1,2 @@
-window.version="2.7.0";
-window.commitHash="54a1587";
+window.version="2.7.1";
+window.commitHash="4ec220d";
