@@ -20,7 +20,7 @@
     "ng-lodash": "0.2.3",
     "qrcode-decoder-js": "*",
     "ng-csv": "~0.3.6",
-    "trezor-connect": "../connect/build/trezor-connect.js"
+    "trezor-connect": "https://connect.trezor.io/6/trezor-connect.js"
   },
   "resolutions": {
     "angular": "1.5.3"
