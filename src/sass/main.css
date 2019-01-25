@@ -5,7 +5,8 @@
  */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; }
 
 .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p, .panel li, .panel dl {
   color: #2C3E50; }
@@ -203,7 +204,7 @@ a {
 
 .page, .main {
   height: 100%;
-  background-color: #F6F7F9; }
+  background-color: #F4F4F4; }
 
 .waiting {
   border: 2px solid #fff; }
@@ -1329,11 +1330,11 @@ a.missing-copayers {
   margin-bottom: 50px; }
 
 .sidebar ion-content {
-  background: #2C3E50;
-  top: 115px; }
+  top: 165px; }
 
 .sidebar {
-  background: #2C3E50; }
+  background: linear-gradient(147.16deg, #1E1C82 0%, #A752D6 100%);
+  height: 100vh; }
   .sidebar .icon {
     width: 35px;
     text-align: center;
@@ -1350,12 +1351,11 @@ a.missing-copayers {
 
 .sidebar li {
   overflow: hidden;
-  border-bottom: 1px solid #384B5F; }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   .sidebar li.nav-item.selected {
-    background-color: #122232; }
+    background-color: #FFB900; }
 
 .sidebar .avatar-wallet {
-  background-color: #2C3E50;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 700;
@@ -1381,9 +1381,10 @@ a.missing-copayers {
   padding-top: 5px; }
 
 .sidebar header {
+  background: url("../img/lesk.svg") top right no-repeat;
+  background-size: contain;
   text-align: center;
-  padding: 1.7rem;
-  border-bottom: 1px solid #384B5F; }
+  padding: 60px 1.7rem; }
   .sidebar header h1 {
     color: #fff;
     margin: 0;
@@ -1398,7 +1399,7 @@ a.missing-copayers {
   padding: 1rem 0.7rem;
   font-size: 12px;
   font-weight: 300;
-  color: #A5B2BF;
+  color: #fff;
   cursor: pointer !important; }
 
 .sidebar ul {
