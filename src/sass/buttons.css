@@ -1,7 +1,14 @@
 .button, button {
+  border-radius: 5px;
+  box-shadow: 0 11px 16px 0 rgba(51, 51, 51, 0.08);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
   padding: 1rem 1.2rem 1.0625rem;
-  border: 1px solid transparent;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  border: 1px solid transparent; }
+  .button:hover, button:hover {
+    box-shadow: 0 10px 10px 0 rgba(255, 186, 0, 0); }
 
 .button.outline {
   background: transparent; }
@@ -95,17 +102,17 @@ button.secondary {
 
 /* PRIMARY */
 button.primary {
-  background-color: #1ABC9C;
+  background-color: #FFB900;
   color: #fff; }
   button.primary:hover, button.primary:focus {
-    background-color: #1ABC9C;
+    background-color: #f7c854;
     color: #fff; }
 
 .button.primary {
-  background-color: #1ABC9C;
+  background-color: #FFB900;
   color: #fff; }
   .button.primary:hover, .button.primary:focus {
-    background-color: #1ABC9C;
+    background-color: #f7c854;
     color: #fff; }
 
 /* WARNING */
@@ -256,6 +263,3 @@ button.radius, .button.radius {
 
 .backup .button-box {
   background: #F6F7F9; }
-
-.splash .button-box {
-  background: #2C3E50; }
