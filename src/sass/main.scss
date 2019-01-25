@@ -1475,11 +1475,10 @@ input.ng-invalid-match {
 }
 
 .tab-bar {
-  background-color: #4B6178;
+  background: transparent;
   z-index: 5;
   h1 {
-    font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -1512,6 +1511,10 @@ input.ng-invalid-match {
   .right-small a, .left-small a {
     color: #7A8C9E;
   }
+}
+
+.topbar-container {
+  background: linear-gradient(90deg, #1E1C82 0%, #A752D6 100%);
 }
 
 .tab-bar {
@@ -1577,10 +1580,19 @@ input.ng-invalid-match {
 .amount {
   width: 100%;
   text-align: center;
-  padding: 1.5rem 1rem 1.5rem 1rem;
+  padding: 0 1rem 30px;
   color: #fff;
-  height: 150px;
+  height: auto;
   margin-bottom: 25px;
+}
+
+.amount-tobar {
+  background: linear-gradient(90deg, #1E1C82 0%, #A752D6 100%);
+}
+
+.amount-tobar-number {
+  font-size: 34px;
+  line-height: 1;
 }
 
 .alternative-amount {
@@ -1626,17 +1638,24 @@ input.ng-invalid-match {
 }
 
 .camera-icon a {
-  background: #4B6178;
+  background: #FFB900;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   color: #fff;
   display: block;
   position: absolute;
-  padding: 15px 17px;
   border-radius: 100%;
   top: inherit;
   right: 15px;
   bottom: 2px;
-  line-height: 12px;
+  width: 56px;
+  height: 56px;
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 
 .send .camera-icon a {

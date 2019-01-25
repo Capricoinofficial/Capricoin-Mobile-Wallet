@@ -40,7 +40,7 @@
           on-refresh="index.updateAll({triggerTxUpdate: true})">
         </ion-refresher>
         <div class="oh pr">
-          <div ng-style="{'background-color':index.backgroundColor}" class="amount">
+          <div class="amount amount-tobar">
             <div ng-if="!index.notAuthorized && !index.updating">
               <div class="m15t" ng-show="index.updateError" ng-click='index.updateAll({triggerTxUpdate: true})'>
                 <span class="size-12 db m10b">{{index.updateError|translate}}</span>
@@ -53,7 +53,7 @@
               </div>
 
               <div ng-click='index.updateAll({triggerTxUpdate: true})'  ng-show="!index.updateError && index.walletScanStatus != 'error' && !index.shouldHideBalance" on-hold="index.onHold()">
-                <strong class="size-36">{{index.totalBalanceStr}}</strong>
+                <strong class="amount-tobar-number">{{index.totalBalanceStr}}</strong>
                 <div class="size-14" ng-if="index.totalBalanceAlternative">{{index.totalBalanceAlternative}} {{index.alternativeIsoCode}}</div>
                 <div class="size-14" ng-if="index.pendingAmount">
                   <span translate>Pending Confirmation</span>: {{index.pendingAmountStr}}
