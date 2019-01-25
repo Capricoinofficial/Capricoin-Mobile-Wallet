@@ -83,6 +83,15 @@
   border-bottom: 1px solid #E9E9EC;
 }
 
+.toggle .track {
+  border: 1px solid #CDCDCD;
+}
+
+.toggle .handle {
+  background-color: #333333;
+  border: none;
+}
+
 .toggle-label {
 	color: rgb(41, 55, 68);
 	font-size: 14px;

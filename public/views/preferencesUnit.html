@@ -3,9 +3,15 @@
 </div>
 
 <div class="content preferences" ng-controller="preferencesUnitController">
-  <h4></h4>
+  <div class="row">
+    <div class="large-8 large-offset-2 columns">
 
-  <ion-radio class="line-b size-12 radio-label" ng-repeat="unit in unitList" ng-value="unit.code" ng-model="currentUnit"
-    ng-click="save(unit)">{{unit.shortName}}
-  </ion-radio>
+      <h4></h4>
+
+      <ion-radio class="line-b size-12 radio-label" ng-repeat="unit in unitList" ng-value="unit.code" ng-model="currentUnit"
+        ng-click="save(unit)">{{unit.shortName}}
+      </ion-radio>
+
+    </div>
+  </div>
 </div>

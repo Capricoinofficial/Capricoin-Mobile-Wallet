@@ -5,17 +5,23 @@
 </div>
 
 <div class="content preferences" ng-controller="preferencesDeleteWalletController">
-  <div class="text-center text-gray m20v size-12">
-    <div class="text-warning size-18 m10b" translate>Warning!</div>
-    <div class="m10" translate>Permanently delete this wallet. THIS ACTION CANNOT BE REVERSED</div>
-  </div>
+  <div class="row">
+    <div class="large-8 large-offset-2 columns">
 
-  <ul class="no-bullet m0">
-    <li ng-click="deleteWallet()">
-      <div class="right" ng-style="{'color':index.backgroundColor}" ng-show="!isDeletingWallet">
-        {{index.walletName}} <span ng-show="index.alias">({{index.alias}})</span>
+      <div class="text-center text-gray m20v size-12">
+        <div class="text-warning size-18 m10b" translate>Warning!</div>
+        <div class="m10" translate>Permanently delete this wallet. THIS ACTION CANNOT BE REVERSED</div>
       </div>
-      <div translate>Delete wallet</div>
-    </li>
-  </ul>
+
+      <ul class="no-bullet m0">
+        <li ng-click="deleteWallet()">
+          <div class="right" ng-style="{'color':index.backgroundColor}" ng-show="!isDeletingWallet">
+            {{index.walletName}} <span ng-show="index.alias">({{index.alias}})</span>
+          </div>
+          <div translate>Delete wallet</div>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
 </div>
