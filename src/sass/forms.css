@@ -439,7 +439,7 @@ label.postfix {
   font-weight: normal; }
 
 .bottombar-item a {
-  color: #A5B2BF;
+  color: #fff;
   padding: 0.5rem 0;
   display: block; }
   .bottombar-item a.active .label {
