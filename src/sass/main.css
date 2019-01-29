@@ -8,8 +8,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important; }
+
 .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p, .panel li, .panel dl {
-  color: #2C3E50; }
+  color: #333; }
 
 #qr-canvas {
   display: none; }
@@ -32,7 +35,7 @@ body {
   padding: 0px 40px 5px 10px; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2C3E50; }
+  color: #333; }
 
 h1 {
   font-weight: 100;
@@ -73,7 +76,7 @@ h4.title a {
   top: -5px !important; }
 
 .preferences h4 {
-  background: #F6F7F9;
+  background: #f4f4f4;
   padding: 25px 0px 5px 10px;
   text-transform: uppercase;
   color: #555;
@@ -82,7 +85,7 @@ h4.title a {
   margin: 0; }
 
 .modal-content h4, .glidera h4, .coinbase h4, .amazon h4 {
-  background: #F6F7F9;
+  background: #f4f4f4;
   padding: 25px 0px 5px 10px;
   text-transform: uppercase;
   color: #555;
@@ -111,7 +114,7 @@ h4.title a {
   margin-bottom: 1.5rem;
   background-color: #E4E8EC;
   padding-left: 0.5rem;
-  color: #2C3E50;
+  color: #333;
   font-size: 13px;
   height: 35px;
   padding-top: 7px; }
@@ -145,7 +148,7 @@ ul.button-group li {
 body, html {
   height: 100%;
   width: 100%;
-  color: #2C3E50;
+  color: #333;
   -webkit-user-select: text; }
 
 .alt-currency {
@@ -202,7 +205,7 @@ a {
   font-size: 16px; }
 
 .main-dark {
-  background-color: #2C3E50;
+  background-color: #333;
   height: 100%; }
 
 .page, .main {
@@ -216,7 +219,7 @@ a {
   border: 2px solid #1ABC9C; }
 
 .main {
-  background-color: #F6F7F9;
+  background-color: #f4f4f4;
   padding: 0 0 58px 0;
   position: relative; }
 
@@ -227,7 +230,7 @@ a {
 .content {
   width: 100%;
   position: absolute;
-  top: 45px;
+  top: 75px;
   bottom: 0;
   overflow: auto; }
   .content.disclaimer {
@@ -339,7 +342,7 @@ ul.tx-copayers {
   margin-bottom: 2rem; }
 
 .backup .tab-bar {
-  background: #F6F7F9;
+  background: #f4f4f4;
   border-bottom: none; }
 
 .extra-padding-bottom {
@@ -363,7 +366,7 @@ ul.tx-copayers {
   .send-note span {
     margin-bottom: 5px;
     font-size: 12px;
-    color: #2C3E50; }
+    color: #333; }
 
 .manage a {
   text-transform: uppercase;
@@ -835,7 +838,7 @@ input.ng-invalid-match {
     border-color: red; }
 
 .black {
-  background-color: #2C3E50; }
+  background-color: #333; }
 
 .white {
   background-color: #FFFFFF; }
@@ -853,7 +856,7 @@ input.ng-invalid-match {
   color: #8597A7; }
 
 .text-black {
-  color: #2C3E50; }
+  color: #333; }
 
 .text-primary {
   color: #1ABC9C; }
@@ -986,7 +989,7 @@ input.ng-invalid-match {
   z-index: 999;
   top: 0;
   left: 0;
-  background-color: #2C3E50; }
+  background-color: #333; }
 
 .loading-screen-content {
   margin-top: 20%;
@@ -1203,7 +1206,22 @@ input.ng-invalid-match {
   color: #7A8C9E; }
 
 .topbar-container {
-  background: linear-gradient(90deg, #1E1C82 0%, #A752D6 100%); }
+  background: linear-gradient(90deg, #1E1C82 0%, #A752D6 100%);
+  margin-bottom: 30px; }
+  .topbar-container:not(.no-wave) {
+    position: relative;
+    padding-bottom: 30px; }
+    .topbar-container:not(.no-wave):after {
+      z-index: 0;
+      content: '';
+      position: absolute;
+      display: block;
+      width: 102%;
+      left: -1%;
+      bottom: -1px;
+      height: 26px;
+      background: url("../img/big-wave.svg") left bottom no-repeat;
+      background-size: 100% auto; }
 
 .tab-bar .icon-back {
   font-size: 2.5rem;
@@ -1260,8 +1278,7 @@ input.ng-invalid-match {
   text-align: center;
   padding: 0 1rem 30px;
   color: #fff;
-  height: auto;
-  margin-bottom: 25px; }
+  height: auto; }
 
 .amount-tobar {
   background: linear-gradient(90deg, #1E1C82 0%, #A752D6 100%); }
@@ -1315,7 +1332,7 @@ input.ng-invalid-match {
   border-radius: 100%;
   top: inherit;
   right: 15px;
-  bottom: 2px;
+  bottom: 15px;
   width: 56px;
   height: 56px; }
   .camera-icon a i {
@@ -1383,7 +1400,7 @@ a.missing-copayers {
   padding-top: 4px; }
 
 .payment-uri .avatar-wallet, .modal-content .avatar-wallet {
-  background-color: #2C3E50;
+  background-color: #333;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 700;
@@ -1530,7 +1547,7 @@ to prevent collapsing during animation*/
     top: 0px;
     z-index: 2000;
     opacity: 1.0 !important;
-    background-color: #2C3E50; }
+    background-color: #333; }
   .dr-notification-wrapper.client-error {
     position: absolute;
     top: 45px;
@@ -1605,7 +1622,7 @@ to prevent collapsing during animation*/
   height: 100%;
   width: 100%;
   -webkit-transform: translate3d(0, 0, 0);
-  background: #f6f7f9; }
+  background: #f4f4f4; }
 
 body.modal-open {
   position: fixed;
@@ -1746,7 +1763,7 @@ body.modal-open {
   text-align: center; }
 
 .calculator .button-calc .operator {
-  color: #2C3E50;
+  color: #333;
   background-color: #eee; }
 
 .calculator .button-calc .columns:active {
@@ -1756,7 +1773,7 @@ body.modal-open {
   background-color: #f8f8f8; }
 
 input[type="number"][readonly] {
-  background-color: #F6F7F9;
+  background-color: #f4f4f4;
   padding-left: 0; }
 
 @media all and (max-height: 480px) {
@@ -1794,3 +1811,21 @@ input[type="number"][readonly] {
     top: 50%;
     transform: translateY(-50%);
     right: 13px; }
+
+.wave-after {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-25px);
+  height: 26px;
+  width: 100%; }
+  .wave-after:after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 102%;
+    left: -1%;
+    bottom: 0;
+    height: 100%;
+    background: url("../img/big-wave.svg") left bottom no-repeat;
+    background-size: 100% auto; }

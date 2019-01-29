@@ -11,9 +11,13 @@ body {
   font-weight: 500;
 }
 
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold !important;
+}
+
 .panel {
   h1, h2, h3, h4, h5, h6, p, li, dl {
-    color: #2C3E50;
+    color: #333;
   }
 }
 
@@ -43,7 +47,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2C3E50;
+  color: #333;
 }
 
 h1 {
@@ -92,7 +96,7 @@ h4.title a {
     top: -5px !important;
   }
   h4 {
-    background: #F6F7F9;
+    background: #f4f4f4;
     padding: 25px 0px 5px 10px;
     text-transform: uppercase;
     color: #555;
@@ -103,7 +107,7 @@ h4.title a {
 }
 
 .modal-content h4, .glidera h4, .coinbase h4, .amazon h4 {
-  background: #F6F7F9;
+  background: #f4f4f4;
   padding: 25px 0px 5px 10px;
   text-transform: uppercase;
   color: #555;
@@ -136,7 +140,7 @@ h4.title a {
   margin-bottom: 1.5rem;
   background-color: #E4E8EC;
   padding-left: 0.5rem;
-  color: #2C3E50;
+  color: #333;
   font-size: 13px;
   height: 35px;
   padding-top: 7px;
@@ -179,7 +183,7 @@ ul.button-group li {
 body, html {
   height: 100%;
   width: 100%;
-  color: #2C3E50;
+  color: #333;
   -webkit-user-select: text;
 }
 
@@ -248,7 +252,7 @@ a {
 }
 
 .main-dark {
-  background-color: #2C3E50;
+  background-color: #333;
   height: 100%;
 }
 
@@ -266,7 +270,7 @@ a {
 }
 
 .main {
-  background-color: #F6F7F9;
+  background-color: #f4f4f4;
   padding: 0 0 58px 0;
   position: relative;
 }
@@ -280,7 +284,7 @@ a {
 .content {
   width: 100%;
   position: absolute;
-  top: 45px;
+  top: 75px;
   bottom: 0;
   overflow: auto;
   &.disclaimer {
@@ -415,7 +419,7 @@ ul.tx-copayers {
     margin-bottom: 2rem;
   }
   .tab-bar {
-    background: #F6F7F9;
+    background: #f4f4f4;
     border-bottom: none;
   }
 }
@@ -444,7 +448,7 @@ ul.tx-copayers {
   span {
     margin-bottom: 5px;
     font-size: 12px;
-    color: #2C3E50;
+    color: #333;
   }
 }
 
@@ -1064,7 +1068,7 @@ input.ng-invalid-match {
 }
 
 .black {
-  background-color: #2C3E50;
+  background-color: #333;
 }
 
 .white {
@@ -1088,7 +1092,7 @@ input.ng-invalid-match {
 }
 
 .text-black {
-  color: #2C3E50;
+  color: #333;
 }
 
 .text-primary {
@@ -1249,7 +1253,7 @@ input.ng-invalid-match {
   z-index: 999;
   top: 0;
   left: 0;
-  background-color: #2C3E50;
+  background-color: #333;
 }
 
 .loading-screen-content {
@@ -1518,6 +1522,25 @@ input.ng-invalid-match {
 
 .topbar-container {
   background: linear-gradient(90deg, #1E1C82 0%, #A752D6 100%);
+  margin-bottom: 30px;
+
+  &:not(.no-wave) {
+    position: relative;
+    padding-bottom: 30px;
+
+    &:after {
+      z-index: 0;
+      content: '';
+      position: absolute;
+      display: block;
+      width: 102%;
+      left: -1%;
+      bottom: -1px;
+      height: 26px;
+      background: url('../img/big-wave.svg') left bottom no-repeat;
+      background-size: 100% auto;
+    }
+  }
 }
 
 .tab-bar {
@@ -1586,7 +1609,6 @@ input.ng-invalid-match {
   padding: 0 1rem 30px;
   color: #fff;
   height: auto;
-  margin-bottom: 25px;
 }
 
 .amount-tobar {
@@ -1649,7 +1671,7 @@ input.ng-invalid-match {
   border-radius: 100%;
   top: inherit;
   right: 15px;
-  bottom: 2px;
+  bottom: 15px;
   width: 56px;
   height: 56px;
 
@@ -1733,7 +1755,7 @@ a.missing-copayers {
 }
 
 .payment-uri .avatar-wallet, .modal-content .avatar-wallet {
-  background-color: #2C3E50;
+  background-color: #333;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 700;
@@ -1918,7 +1940,7 @@ to prevent collapsing during animation*/
     top: 0px;
     z-index: 2000;
     opacity: 1.0 !important;
-    background-color: #2C3E50;
+    background-color: #333;
   }
   &.client-error {
     position: absolute;
@@ -2007,7 +2029,7 @@ to prevent collapsing during animation*/
   height: 100%;
   width: 100%;
   -webkit-transform: translate3d(0, 0, 0);
-  background: #f6f7f9;
+  background: #f4f4f4;
 }
 
 body.modal-open {
@@ -2182,7 +2204,7 @@ body.modal-open {
 }
 
 .calculator .button-calc .operator {
-  color: #2C3E50;
+  color: #333;
   background-color: #eee;
 }
 
@@ -2197,7 +2219,7 @@ body.modal-open {
 // No looks likes locked
 input[type="number"] {
   &[readonly] {
-    background-color: #F6F7F9;
+    background-color: #f4f4f4;
     padding-left: 0;
   }
 }
@@ -2241,5 +2263,26 @@ input[type="number"] {
     top: 50%;
     transform: translateY(-50%);
     right: 13px;
+  }
+}
+
+.wave-after {
+  position: relative;
+  overflow:hidden;
+  transform: translateY(-25px);
+  height: 26px;
+  width: 100%;
+
+  &:after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 102%;
+    left: -1%;
+    bottom: 0;
+    height: 100%;
+    background: url('../img/big-wave.svg') left bottom no-repeat;
+    background-size: 100% auto;
   }
 }
