@@ -3,17 +3,24 @@
 </div>
 
 <div class="content preferences" ng-controller="preferencesAltCurrencyController" ng-init="init()">
-  <h4></h4>
+  <div class="row">
+    <div class="large-8 large-offset-2 columns">
 
-  <ion-content>
-    <ion-radio class="line-b size-12 radio-label" ng-repeat="altCurrency in altCurrencyList" ng-value="altCurrency.isoCode" ng-model="currentCurrency"
-      ng-click="save(altCurrency)">{{altCurrency.name}}
-    </ion-radio>
-    <ion-infinite-scroll
-      ng-if="!listComplete"
-      on-infinite="loadMore()"
-      distance="1%">
-    </ion-infinite-scroll>
-  </ion-content>
+      <h4></h4>
+
+      <ion-content>
+        <ion-radio class="line-b size-12 radio-label" ng-repeat="altCurrency in altCurrencyList" ng-value="altCurrency.isoCode" ng-model="currentCurrency"
+          ng-click="save(altCurrency)">{{altCurrency.name}}
+        </ion-radio>
+        <ion-infinite-scroll
+          ng-if="!listComplete"
+          on-infinite="loadMore()"
+          distance="1%">
+        </ion-infinite-scroll>
+      </ion-content>
+      
+      <div class="extra-margin-bottom"></div>
+    </div>
+  </div>
 </div>
 

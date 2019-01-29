@@ -3,11 +3,16 @@
  * Copay main CSS
  *
  */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 body {
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important; }
 
 .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p, .panel li, .panel dl {
-  color: #2C3E50; }
+  color: #333; }
 
 #qr-canvas {
   display: none; }
@@ -30,7 +35,7 @@ body {
   padding: 0px 40px 5px 10px; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2C3E50; }
+  color: #333; }
 
 h1 {
   font-weight: 100;
@@ -71,7 +76,7 @@ h4.title a {
   top: -5px !important; }
 
 .preferences h4 {
-  background: #F6F7F9;
+  background: #f4f4f4;
   padding: 25px 0px 5px 10px;
   text-transform: uppercase;
   color: #555;
@@ -80,7 +85,7 @@ h4.title a {
   margin: 0; }
 
 .modal-content h4, .glidera h4, .coinbase h4, .amazon h4 {
-  background: #F6F7F9;
+  background: #f4f4f4;
   padding: 25px 0px 5px 10px;
   text-transform: uppercase;
   color: #555;
@@ -90,8 +95,9 @@ h4.title a {
 
 .walletHome h4.title {
   padding: 0px 0 10px 15px;
-  margin: 5px 0 5px 0;
-  font-size: 16px; }
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700; }
 
 .preferences ul, .modal-content ul {
   font-size: 14px;
@@ -99,14 +105,16 @@ h4.title a {
 
 .preferences ul li {
   padding: 16px 10px 16px 16px;
-  border-bottom: 1px solid #E9E9EC; }
+  border-radius: 5px;
+  margin-bottom: 13px;
+  box-shadow: 0 8px 12px 0 rgba(51, 51, 51, 0.07); }
 
 .addressbook-input, .disabled-input {
   display: block;
   margin-bottom: 1.5rem;
   background-color: #E4E8EC;
   padding-left: 0.5rem;
-  color: #2C3E50;
+  color: #333;
   font-size: 13px;
   height: 35px;
   padding-top: 7px; }
@@ -140,7 +148,7 @@ ul.button-group li {
 body, html {
   height: 100%;
   width: 100%;
-  color: #2C3E50;
+  color: #333;
   -webkit-user-select: text; }
 
 .alt-currency {
@@ -197,12 +205,12 @@ a {
   font-size: 16px; }
 
 .main-dark {
-  background-color: #2C3E50;
+  background-color: #333;
   height: 100%; }
 
 .page, .main {
   height: 100%;
-  background-color: #F6F7F9; }
+  background-color: #F4F4F4; }
 
 .waiting {
   border: 2px solid #fff; }
@@ -211,7 +219,7 @@ a {
   border: 2px solid #1ABC9C; }
 
 .main {
-  background-color: #F6F7F9;
+  background-color: #f4f4f4;
   padding: 0 0 58px 0;
   position: relative; }
 
@@ -222,7 +230,7 @@ a {
 .content {
   width: 100%;
   position: absolute;
-  top: 45px;
+  top: 75px;
   bottom: 0;
   overflow: auto; }
   .content.disclaimer {
@@ -334,7 +342,7 @@ ul.tx-copayers {
   margin-bottom: 2rem; }
 
 .backup .tab-bar {
-  background: #F6F7F9;
+  background: #f4f4f4;
   border-bottom: none; }
 
 .extra-padding-bottom {
@@ -358,7 +366,7 @@ ul.tx-copayers {
   .send-note span {
     margin-bottom: 5px;
     font-size: 12px;
-    color: #2C3E50; }
+    color: #333; }
 
 .manage a {
   text-transform: uppercase;
@@ -830,7 +838,7 @@ input.ng-invalid-match {
     border-color: red; }
 
 .black {
-  background-color: #2C3E50; }
+  background-color: #333; }
 
 .white {
   background-color: #FFFFFF; }
@@ -848,7 +856,7 @@ input.ng-invalid-match {
   color: #8597A7; }
 
 .text-black {
-  color: #2C3E50; }
+  color: #333; }
 
 .text-primary {
   color: #1ABC9C; }
@@ -981,7 +989,7 @@ input.ng-invalid-match {
   z-index: 999;
   top: 0;
   left: 0;
-  background-color: #2C3E50; }
+  background-color: #333; }
 
 .loading-screen-content {
   margin-top: 20%;
@@ -1002,11 +1010,10 @@ input.ng-invalid-match {
 .scrollArea {
   height: 280px;
   overflow: scroll;
-  background: #213140;
-  border: 1px solid #4B6178;
+  background: #fff;
   border-radius: 5px;
   margin: 1rem;
-  color: #A5B2BF;
+  color: #333333;
   line-height: 30px;
   padding: 0.5rem; }
   .scrollArea ul {
@@ -1084,12 +1091,9 @@ input.ng-invalid-match {
 
 .splash {
   top: 0;
-  background: #2C3E50;
-  background-image: -webkit-linear-gradient(#3D5672 0%, #223243 100%);
-  background-image: -o-linear-gradient(#3D5672 0%, #223243 100%);
-  background-image: linear-gradient(#3D5672 0%, #223243 100%); }
+  background: linear-gradient(147.16deg, #1E1C82 0%, #A752D6 100%); }
   .splash .start-button button.black {
-    background-color: #4B6178; }
+    background-color: #1E1C82; }
   .splash .start-button button.outline.tiny {
     font-size: 0.58rem; }
   .splash .container-image {
@@ -1173,11 +1177,10 @@ input.ng-invalid-match {
   animation-delay: -0.8s; }
 
 .tab-bar {
-  background-color: #4B6178;
+  background: transparent;
   z-index: 5; }
   .tab-bar h1 {
-    font-weight: 500;
-    font-size: 14px; }
+    font-size: 16px; }
 
 .tab-bar-section.middle {
   left: 4.7rem;
@@ -1201,6 +1204,24 @@ input.ng-invalid-match {
 
 .backup .right-small a, .backup .left-small a {
   color: #7A8C9E; }
+
+.topbar-container {
+  background: linear-gradient(90deg, #1E1C82 0%, #A752D6 100%);
+  margin-bottom: 30px; }
+  .topbar-container:not(.no-wave) {
+    position: relative;
+    padding-bottom: 30px; }
+    .topbar-container:not(.no-wave):after {
+      z-index: 0;
+      content: '';
+      position: absolute;
+      display: block;
+      width: 102%;
+      left: -1%;
+      bottom: -1px;
+      height: 26px;
+      background: url("../img/big-wave.svg") left bottom no-repeat;
+      background-size: 100% auto; }
 
 .tab-bar .icon-back {
   font-size: 2.5rem;
@@ -1228,8 +1249,8 @@ input.ng-invalid-match {
   bottom: 0;
   width: 100%;
   z-index: 5;
-  background: #FFFFFF;
-  border-top: 1px solid #E2E7ED; }
+  background: linear-gradient(147.16deg, #1E1C82 0%, #A752D6 100%);
+  box-shadow: 0 11px 16px 0 rgba(51, 51, 51, 0.16); }
 
 .second-bottom-bar {
   z-index: 6; }
@@ -1241,26 +1262,30 @@ input.ng-invalid-match {
   padding-top: 1rem !important; }
 
 .menu-wallet-home {
-  background: #fff linear-gradient(-180deg, #F1F3F5 0%, #FFFFFF 30%);
-  box-shadow: 0px -1px 0px 0px rgba(165, 178, 191, 0.35);
+  background: #FFB900;
   width: 100%;
   height: 8rem;
   position: absolute;
-  top: -10px;
+  top: 0px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  border-radius: 100%;
   z-index: -999; }
 
 .amount {
   width: 100%;
   text-align: center;
-  padding: 1.5rem 1rem 1.5rem 1rem;
+  padding: 0 1rem 30px;
   color: #fff;
-  height: 150px;
-  margin-bottom: 25px; }
+  height: auto; }
+
+.amount-tobar {
+  background: linear-gradient(90deg, #1E1C82 0%, #A752D6 100%); }
+
+.amount-tobar-number {
+  font-size: 34px;
+  line-height: 1; }
 
 .alternative-amount {
   height: 25px;
@@ -1299,17 +1324,22 @@ input.ng-invalid-match {
   color: #fff; }
 
 .camera-icon a {
-  background: #4B6178;
+  background: #FFB900;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   color: #fff;
   display: block;
   position: absolute;
-  padding: 15px 17px;
   border-radius: 100%;
   top: inherit;
   right: 15px;
-  bottom: 2px;
-  line-height: 12px; }
+  bottom: 15px;
+  width: 56px;
+  height: 56px; }
+  .camera-icon a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .send .camera-icon a {
   top: inherit;
@@ -1332,11 +1362,11 @@ a.missing-copayers {
   margin-bottom: 50px; }
 
 .sidebar ion-content {
-  background: #2C3E50;
-  top: 115px; }
+  top: 165px; }
 
 .sidebar {
-  background: #2C3E50; }
+  background: linear-gradient(147.16deg, #1E1C82 0%, #A752D6 100%);
+  height: 100vh; }
   .sidebar .icon {
     width: 35px;
     text-align: center;
@@ -1353,12 +1383,11 @@ a.missing-copayers {
 
 .sidebar li {
   overflow: hidden;
-  border-bottom: 1px solid #384B5F; }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   .sidebar li.nav-item.selected {
-    background-color: #122232; }
+    background-color: #FFB900; }
 
 .sidebar .avatar-wallet {
-  background-color: #2C3E50;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 700;
@@ -1371,7 +1400,7 @@ a.missing-copayers {
   padding-top: 4px; }
 
 .payment-uri .avatar-wallet, .modal-content .avatar-wallet {
-  background-color: #2C3E50;
+  background-color: #333;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 700;
@@ -1384,9 +1413,10 @@ a.missing-copayers {
   padding-top: 5px; }
 
 .sidebar header {
+  background: url("../img/lesk.svg") top right no-repeat;
+  background-size: contain;
   text-align: center;
-  padding: 1.7rem;
-  border-bottom: 1px solid #384B5F; }
+  padding: 60px 1.7rem; }
   .sidebar header h1 {
     color: #fff;
     margin: 0;
@@ -1401,7 +1431,7 @@ a.missing-copayers {
   padding: 1rem 0.7rem;
   font-size: 12px;
   font-weight: 300;
-  color: #A5B2BF;
+  color: #fff;
   cursor: pointer !important; }
 
 .sidebar ul {
@@ -1517,7 +1547,7 @@ to prevent collapsing during animation*/
     top: 0px;
     z-index: 2000;
     opacity: 1.0 !important;
-    background-color: #2C3E50; }
+    background-color: #333; }
   .dr-notification-wrapper.client-error {
     position: absolute;
     top: 45px;
@@ -1592,7 +1622,7 @@ to prevent collapsing during animation*/
   height: 100%;
   width: 100%;
   -webkit-transform: translate3d(0, 0, 0);
-  background: #f6f7f9; }
+  background: #f4f4f4; }
 
 body.modal-open {
   position: fixed;
@@ -1683,29 +1713,34 @@ body.modal-open {
 
 .create-tab {
   background-color: #fff;
+  box-shadow: 11px 0 20px 0 rgba(51, 51, 51, 0.12);
   width: 100%;
-  border-bottom: 1px solid #DEDFE1;
   margin-bottom: 25px;
   overflow: hidden; }
   .create-tab .tab-container {
     float: left;
     text-align: center; }
+  .create-tab > .row {
+    max-width: 100%; }
+    .create-tab > .row > .columns {
+      padding-left: 0;
+      padding-right: 0; }
 
 .test {
   background: red; }
 
 .create-tab a {
   font-size: .7rem;
-  padding: 1.2rem .2rem .6rem .2rem;
+  padding: 20px 15px;
   color: #7A8C9E;
   text-transform: uppercase;
   font-weight: 500;
   display: block; }
 
 .tab-container.selected {
-  border-bottom: 3px solid #4B6178; }
+  background: #FFB900; }
   .tab-container.selected a {
-    color: #2C3E50; }
+    color: #fff; }
 
 /*
  * Calculator
@@ -1728,7 +1763,7 @@ body.modal-open {
   text-align: center; }
 
 .calculator .button-calc .operator {
-  color: #2C3E50;
+  color: #333;
   background-color: #eee; }
 
 .calculator .button-calc .columns:active {
@@ -1738,7 +1773,7 @@ body.modal-open {
   background-color: #f8f8f8; }
 
 input[type="number"][readonly] {
-  background-color: #F6F7F9;
+  background-color: #f4f4f4;
   padding-left: 0; }
 
 @media all and (max-height: 480px) {
@@ -1758,3 +1793,39 @@ input[type="number"][readonly] {
     padding: 20px; }
   .calculator .header-calc {
     top: 18%; } }
+
+.wallet-tab {
+  display: block;
+  width: 100%;
+  color: #333;
+  position: relative;
+  line-height: 1; }
+  .wallet-tab:hover {
+    color: #333; }
+  .wallet-tab span, .wallet-tab i {
+    vertical-align: middle; }
+  .wallet-tab > span {
+    margin-left: 15px; }
+  .wallet-tab i.icon-arrow-right3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px; }
+
+.wave-after {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-25px);
+  height: 26px;
+  width: 100%; }
+  .wave-after:after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 102%;
+    left: -1%;
+    bottom: 0;
+    height: 100%;
+    background: url("../img/big-wave.svg") left bottom no-repeat;
+    background-size: 100% auto; }

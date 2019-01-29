@@ -22,7 +22,7 @@
   <div ng-show="type == '12' ">
 
     <div class="row" ng-click="importErr = error = null">
-      <div class="large-12 columns">
+      <div class="large-8 large-offset-2 columns">
         <div class="box-notification m20b" ng-show="importErr">
           <div class="text-warning">
             <div class="m10 text-bold" translate>Could not access the wallet at the server. Please check:</div>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="row">
-      <div class="large-12 columns">
+      <div class="large-8 large-offset-2 columns">
         <form name="importForm12" ng-submit="importMnemonic(importForm12)" novalidate>
           <label for="words" class="m25r">
             <span translate>Type the Recovery Phrase (usually 12 words)</span>:
@@ -94,7 +94,7 @@
             </div>
           </div>
 
-          <button translate type="submit" class="button round expand black m10t" ng-disabled="importForm12.$invalid">Import</button>
+          <button translate type="submit" class="button primary expand m10t" ng-disabled="importForm12.$invalid">Import</button>
         </form>
       </div>
     </div>
@@ -102,7 +102,7 @@
 
   <div ng-show="type == 'file' ">
     <div class="row">
-      <div class="large-12 columns">
+      <div class="large-8 large-offset-2 columns">
         <div class="box-notification m20b" ng-show="error">
           <span class="text-warning size-14">
             {{error|translate}}
@@ -151,7 +151,7 @@
             </div>
           </div>
 
-          <button translate type="submit" class="button round expand black"
+          <button translate type="submit" class="button primary expand"
             ng-disabled="importForm.$invalid || !password ">
             Import backup
           </button>
@@ -162,7 +162,7 @@
 
   <div ng-show="type == 'hwWallet'">
     <div class="row">
-      <div class="large-12 columns">
+      <div class="large-8 large-offset-2 columns">
         <div class="box-notification m20b" ng-show="error">
           <span class="text-warning size-14">
             {{error|translate}}
@@ -215,7 +215,7 @@
               </div>
             </div>
 
-            <button translate type="submit" class="button round expand black">
+            <button translate type="submit" class="button expand primary">
               Import
             </button>
           </div> <!-- seedoptions show -->

@@ -3,9 +3,15 @@
 </div>
 
 <div class="content preferences" ng-controller="preferencesColorController">
-  <h4></h4>
+  <div class="row">
+    <div class="large-8 large-offset-2 columns">
 
-  <ion-radio class="size-12" ng-repeat="c in colorList" ng-value="c" ng-model="currentColor" ng-click="save(c)">
-    <span ng-style="{'color': c}">&block;</span>
-  </ion-radio>
+      <h4></h4>
+
+      <ion-radio class="size-12" ng-repeat="c in colorList" ng-value="c" ng-model="currentColor" ng-click="save(c)">
+        <span ng-style="{'color': c}">&block;</span>
+      </ion-radio>
+
+    </div>
+  </div>
 </div>
