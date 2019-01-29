@@ -97,6 +97,11 @@
 	font-size: 14px;
 }
 
+.toggle.toggle-balanced input:checked+.track {
+  border-color:#FFB900;
+  background-color: #FFB900;
+}
+
 .button.button-light:hover {
 	background-color: #fff;
 	border: 1px solid #E9E9EC;

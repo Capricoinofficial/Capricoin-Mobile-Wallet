@@ -1696,29 +1696,34 @@ body.modal-open {
 
 .create-tab {
   background-color: #fff;
+  box-shadow: 11px 0 20px 0 rgba(51, 51, 51, 0.12);
   width: 100%;
-  border-bottom: 1px solid #DEDFE1;
   margin-bottom: 25px;
   overflow: hidden; }
   .create-tab .tab-container {
     float: left;
     text-align: center; }
+  .create-tab > .row {
+    max-width: 100%; }
+    .create-tab > .row > .columns {
+      padding-left: 0;
+      padding-right: 0; }
 
 .test {
   background: red; }
 
 .create-tab a {
   font-size: .7rem;
-  padding: 1.2rem .2rem .6rem .2rem;
+  padding: 20px 15px;
   color: #7A8C9E;
   text-transform: uppercase;
   font-weight: 500;
   display: block; }
 
 .tab-container.selected {
-  border-bottom: 3px solid #4B6178; }
+  background: #FFB900; }
   .tab-container.selected a {
-    color: #2C3E50; }
+    color: #fff; }
 
 /*
  * Calculator
