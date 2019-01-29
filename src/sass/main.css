@@ -1771,3 +1771,21 @@ input[type="number"][readonly] {
     padding: 20px; }
   .calculator .header-calc {
     top: 18%; } }
+
+.wallet-tab {
+  display: block;
+  width: 100%;
+  color: #333;
+  position: relative;
+  line-height: 1; }
+  .wallet-tab:hover {
+    color: #333; }
+  .wallet-tab span, .wallet-tab i {
+    vertical-align: middle; }
+  .wallet-tab > span {
+    margin-left: 15px; }
+  .wallet-tab i.icon-arrow-right3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px; }

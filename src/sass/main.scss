@@ -2208,3 +2208,29 @@ input[type="number"] {
   .calculator .header-calc { top: 18%; }
 }
 
+.wallet-tab {
+  display: block;
+  width: 100%;
+  color: #333;
+  position: relative;
+  line-height: 1;
+
+  &:hover {
+    color: #333;
+  }
+
+  span, i {
+    vertical-align: middle;
+  }
+
+  > span {
+    margin-left: 15px;
+  }
+
+  i.icon-arrow-right3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px;
+  }
+}
