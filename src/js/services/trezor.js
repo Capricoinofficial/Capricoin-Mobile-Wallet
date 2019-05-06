@@ -2,6 +2,11 @@
 
 angular.module('copayApp.services')
   .factory('trezor', function($log, $timeout, gettext, lodash, bitcore, hwWallet) {
+    TrezorConnect.manifest({
+      email: 'support@capricoin.org',
+      appUrl: 'https://capricoin.org'
+    });
+    
     var root = {};
 
     var SETTLE_TIME = 3000;
