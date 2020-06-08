@@ -67,12 +67,12 @@ if [ ! -d $PROJECT ]; then
 
   if [ $CURRENT_OS == "IOS" ]; then
     echo "${OpenColor}${Green}* Adding IOS platform... ${CloseColor}"
-    cordova platforms add ios
+    cordova platforms add ios@4.4.0
     checkOK
   fi
 
   if [ $CURRENT_OS == "WP8" ]; then
-    echo "${OpenColor}${Green}* Adding WP8 platform... ${CloseColor}"
+    echo "${OpenColor}${Green}* Adding Wp8 platform... ${CloseColor}"
     cordova platforms add wp8
     checkOK
   fi
@@ -81,7 +81,7 @@ if [ ! -d $PROJECT ]; then
 
   if [ $CURRENT_OS == "IOS" ]
   then
-    cordova plugin add https://github.com/tjwoon/csZBar.git#fc5dcc300b08d59aef51b15172720efefe873a96
+    cordova plugin add https://github.com/joaopiopedreira/csZBar.git#1449676834686181091e8f379d974c0db050ddd3
     checkOK
   else
     cordova plugin add https://github.com/jrontend/phonegap-plugin-barcodescanner.git#3a4b4ea69c8bff86f9749f7af332fc5b58c88601
@@ -89,12 +89,12 @@ if [ ! -d $PROJECT ]; then
   fi
 
   if [ $CURRENT_OS == "IOS" ]; then
-    cordova plugin add phonegap-plugin-push@1.5.3
+    cordova plugin add https://github.com/phonegap/phonegap-plugin-push.git#1.5.3
     checkOK
   fi
 
   if [ $CURRENT_OS == "ANDROID" ]; then
-    cordova plugin add phonegap-plugin-push@1.2.3
+    cordova plugin add https://github.com/phonegap/phonegap-plugin-push.git#1.2.0
     checkOK
   fi
 
@@ -110,22 +110,24 @@ if [ ! -d $PROJECT ]; then
   cordova plugin add https://github.com/apache/cordova-plugin-statusbar.git#916cccc2c00a1b7c77e2e738c83e74a22bdd55e7
   checkOK
 
-  cordova plugin add https://github.com/cmgustavo/Custom-URL-scheme.git --variable URL_SCHEME=bitcoin --variable SECOND_URL_SCHEME=copay
+  cordova plugin add https://github.com/cmgustavo/Custom-URL-scheme.git#f96aa49e7cca9d655e07f83935e1324b6f5af0bd --variable URL_SCHEME=capricoin --variable SECOND_URL_SCHEME=copay
   checkOK
 
   cordova plugin add https://github.com/apache/cordova-plugin-inappbrowser.git#0f5de8524f8f83c52e10d32da1d45f102086b5dd
   checkOK
 
-  cordova plugin add https://github.com/413326885/cordova-plugin-x-toast.git#f3767b43277d1e74201b9d4a52154bed6f0cc3be && cordova prepare
+  cordova plugin add https://github.com/413326885/cordova-plugin-x-toast.git#f3767b43277d1e74201b9d4a52154bed6f0cc3be
+  cordova prepare
   checkOK
 
-  cordova plugin add https://github.com/VersoSolutions/CordovaClipboard.git#03fe48b62411cbff22229ca13cc3ac8b282f7945
+  cordova plugin add https://github.com/ihadeed/cordova-clipboard.git#f8041a7c9fea7f0c51a940afa0dbe02e83f057b8
   checkOK
 
-  cordova plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git#5eb6019ea2addec6f7f754913425a8c22f7f3284 && cordova prepare
+  cordova plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git#5eb6019ea2addec6f7f754913425a8c22f7f3284
+  cordova prepare
   checkOK
 
-  cordova plugin add https://github.com/MadrinX/cordova-progress-dialog.git#702cd341ab791ad8e12b627ac575812f24e9f96c
+  cordova plugin add https://github.com/Paldom/SpinnerDialog.git
   checkOK
 
   cordova plugin add https://github.com/apache/cordova-plugin-dialogs.git#3b5cc87e7c8b15cbb91c77c216c766917aa007c7
@@ -143,7 +145,8 @@ if [ ! -d $PROJECT ]; then
   cordova plugin add https://github.com/apache/cordova-plugin-file.git#4325302f5c891471a0409c3f2239f3c6fb87b549
   checkOK
 
-  cordova plugin add https://github.com/EddyVerbruggen/cordova-plugin-touch-id.git#20d187343a6ee0612e229b26f687ea36e8d9ff09 && cordova prepare
+  cordova plugin add https://github.com/EddyVerbruggen/cordova-plugin-touch-id.git#20d187343a6ee0612e229b26f687ea36e8d9ff09
+  cordova prepare
   checkOK
 
   cordova plugin add https://github.com/leecrossley/cordova-plugin-transport-security.git#898f2a580f78c95b41870efa0412f3457a31f99d
@@ -155,28 +158,16 @@ if [ ! -d $PROJECT ]; then
   cordova plugin add https://github.com/akofman/cordova-plugin-disable-bitcode.git#1cf10251e5dafbea0602f17af2b02d84f3a74c1c
   checkOK
 
-  if [ $CURRENT_OS == "ANDROID" ]; then
-	## Fix plugin android-fingerprint
-	mkdir -p $PROJECT/platforms/android/res/backup
-	cp -a $PROJECT/platforms/android/res/values-* $PROJECT/platforms/android/res/backup
-	rm -rf $PROJECT/platforms/android/res/values-*
-	cordova plugin add https://github.com/mjwheatley/cordova-plugin-android-fingerprint-auth.git#v1.1.0
-	cp -a $PROJECT/platforms/android/res/backup/* $PROJECT/platforms/android/res/
-	rm -rf $PROJECT/platforms/android/res/backup
-	checkOK
-  else
-	cordova plugin add https://github.com/mjwheatley/cordova-plugin-android-fingerprint-auth.git#v1.1.0
-	checkOK
-
-  fi
-
+  ## Fix plugin android-fingerprint
+  rm -rf $PROJECT/platforms/android/res/values-es
+  cordova plugin add cordova-plugin-android-fingerprint-auth@0.2.0
+  checkOK
 
   cordova plugin add https://github.com/gbenvenuti/cordova-plugin-screen-orientation.git#baa4c2e0ed68fe58e7aa89f6c8beb707012c6426
   checkOK
 
   cordova plugin add https://github.com/driftyco/ionic-plugin-keyboard.git#9b7c416effe392d62b4ff99cd1b931ca3b5a710e
   checkOK
-
 
 fi
 
@@ -232,7 +223,7 @@ if [ $CURRENT_OS == "ANDROID" ]; then
 fi
 
 if [ $CURRENT_OS == "WP8" ]; then
-  echo "Wp8 project!!!"
+  echo "Windows project!!!"
   cp -R $PROJECT/www/* $PROJECT/platforms/wp8/www
   checkOK
   if ! $CLEAR
