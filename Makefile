@@ -2,14 +2,14 @@ VERSION=`cut -d '"' -f2 $BUILDDIR/../version.js`
 
 sign:
 	gpg -u 1112CFA1 --output browser-extensions/chrome/copay-chrome-extension.zip.sig --detach-sig browser-extensions/chrome/copay-chrome-extension.zip
-verify: 
+verify:
 	gpg --verify browser-extensions/chrome/copay-chrome-extension.zip.sig browser-extensions/chrome/copay-chrome-extension.zip
 
 sign-osx:
-	codesign -s 3rd webkitbuilds/Copay-osx.dmg 
+	codesign -s 3rd webkitbuilds/Copay-osx.dmg
 
 verify-osx:
-	codesign -dv webkitbuilds/Copay-osx.dmg 
+	codesign -dv webkitbuilds/Copay-osx.dmg
 
 sign-desktop:
 	gpg -u 1112CFA1 --output webkitbuilds/Copay-linux.zip.sig --detach-sig webkitbuilds/Copay-linux.zip
@@ -57,16 +57,16 @@ ios-debug:
 
 android-prod:
 	cordova/build.sh ANDROID --clear
-	rm -f cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk 
+	rm -f cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk
 	cd cordova/project && cordova build android --release
-	jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore capricoin.keystore -signedjar cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk  cordova/project/platforms/android/build/outputs/apk/android-release-unsigned.apk capricoin 
-	../Library/Android/sdk/build-tools/25.0.2/zipalign -v 4 cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk 
-	
+	jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore capricoin.keystore -signedjar cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk  cordova/project/platforms/android/build/outputs/apk/android-release-unsigned.apk capricoin
+	../Library/Android/sdk/build-tools/28.0.3/zipalign -v 4 cordova/project/platforms/android/build/outputs/apk/android-release-signed.apk cordova/project/platforms/android/build/outputs/apk/android-release-signed-aligned.apk
+
 
 android-debug:
-	cordova/build.sh ANDROID --dbgjs 
+	cordova/build.sh ANDROID --dbgjs
 	cd cordova/project && cordova run android
 
 android-debug-fast:
-	cordova/build.sh ANDROID --dbgjs 
+	cordova/build.sh ANDROID --dbgjs
 	cd cordova/project && cordova run android	 --device

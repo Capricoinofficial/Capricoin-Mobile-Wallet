@@ -61,7 +61,7 @@ if [ ! -d $PROJECT ]; then
   cd $PROJECT
   if [ $CURRENT_OS == "ANDROID" ]; then
     echo "${OpenColor}${Green}* Adding Android platform... ${CloseColor}"
-    cordova platforms add android@5.1.1
+    cordova platforms add android@6.2.3
     checkOK
   fi
 
@@ -158,7 +158,7 @@ if [ ! -d $PROJECT ]; then
   if [ $CURRENT_OS == "ANDROID" ]; then
 	## Fix plugin android-fingerprint
 	mkdir -p $PROJECT/platforms/android/res/backup
-	cp -a $PROJECT/platforms/android/res/values-* $PROJECT/platforms/android/res/backup 
+	cp -a $PROJECT/platforms/android/res/values-* $PROJECT/platforms/android/res/backup
 	rm -rf $PROJECT/platforms/android/res/values-*
 	cordova plugin add https://github.com/mjwheatley/cordova-plugin-android-fingerprint-auth.git#v1.1.0
 	cp -a $PROJECT/platforms/android/res/backup/* $PROJECT/platforms/android/res/
@@ -167,9 +167,9 @@ if [ ! -d $PROJECT ]; then
   else
 	cordova plugin add https://github.com/mjwheatley/cordova-plugin-android-fingerprint-auth.git#v1.1.0
 	checkOK
-	
+
   fi
-  
+
 
   cordova plugin add https://github.com/gbenvenuti/cordova-plugin-screen-orientation.git#baa4c2e0ed68fe58e7aa89f6c8beb707012c6426
   checkOK
